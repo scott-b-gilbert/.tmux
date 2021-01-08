@@ -3,18 +3,18 @@
 Edit S.B.G
 ----------
 In order to make Nvim colorscheme work well inside Tmux, you need to add these settings to your .tmux.conf file:
-``
+```
 set -g default-terminal "tmux-256color"
 # tell Tmux that outside terminal supports true color
 set -ga terminal-overrides ",xterm-256color*:Tc"
-``
+```
 Use tmux-256color instead of screen-256color. Tmux-256color supports italics inside Tmux. 
 In case your system does not have an entry for tmux-256color, you can download terminfo database and build a more complete one:
-``
+```
 curl -LO http://invisible-island.net/datafiles/current/terminfo.src.gz
 gunzip terminfo.src.gz
 tic -x terminfo.src
-``
+```
 This will install a terminfo library under your HOME in the directory .terminfo
 
 About
